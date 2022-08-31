@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./pages/pages.css">
+    <title>Mesto</title>
+</head>
+<body class="page">
+  <header class="header">
+    <img class="header__logo" src="./images/header-logo.svg" alt="Логотип, надпись Mesto">
+  </header>
+  <main class="content">
+    <section class="profile">
+      <img class="profile__avatar" src="./images/image.png" alt="Ваш аватар">
+      <div class="profile__info">
+        <h1 id="profile__name" class="profile__name">Жак-Ив Кусто</h1>
+        <p id="profile__job" class="profile__job">Исследователь океана</p>
+        <button id="profile__edit-button" class="profile__edit-button" type="button"></button>
+      </div>
+      <button class="profile__add-button" type="button"></button>
+    </section>
+    <section class="elements">
+      <ul id="elements__gallery" class="elements__gallery">
+        <li class="elements__gallery-item">
+          <img class="elements__image" src="./images/Karachaevsk.png" alt="Заброшенное здание в горах Карачаевска">
+          <div class="elements__container">
+            <p class="elements__title">Карачаевск</p>
+            <button type="button" id="like" class="elements__like"></button>
+          </div>
+        </li>
+        <li class="elements__gallery-item">
+          <img class="elements__item" src="./images/elbrus-hill.png" alt="Гора Эльбруса на горизонте">
+          <div class="elements__container">
+            <p class="elements__title">Гора Эльбрус</p>
+            <button type="button" id="like" class="elements__like"></button>
+          </div>
+        </li>
+        <li class="elements__gallery-item">
+          <img class="elements__item" src="./images/dombay.png" alt="вид на заснеженные горы Домбая">
+          <div class="elements__container">
+            <p class="elements__title">Домбай</p>
+            <button type="button" id="like" class="elements__like"></button>
+          </div>
+        </li>
+        <li class="elements__gallery-item">
+          <img class="elements__item" src="./images/elbrus-hill.png" alt="Заброшенное здание в горах Карачаевска">
+          <div class="elements__container">
+            <p class="elements__title">Гора Эльбрус</p>
+            <button type="button" id="like" class="elements__like"></button>
+          </div>
+        </li>
+        <li class="elements__gallery-item">
+          <img class="elements__item" src="./images/dombay.png" alt="Гора Эльбруса на горизонте">
+          <div class="elements__container">
+            <p class="elements__title">Домбай</p>
+            <button type="button" id="like" class="elements__like"></button>
+          </div>
+        </li>
+        <li class="elements__gallery-item">
+          <img class="elements__item" src="./images/Karachaevsk.png" alt="вид на заснеженные горы Домбая">
+          <div class="elements__container">
+            <p class="elements__title">Карачаево-Черкесия</p>
+            <button type="button" id="like" class="elements__like"></button>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__copyright">© 2022 Mesto Russia & Дмитрий Бакшистов</p>
+  </footer>
+  <div id="popup" class="popup">
+    <form id="popup__form" class="popup__form">
+      <fieldset class="popup__field">
+        <legend class="popup__title">Редактировать профиль</legend>
+        <label class="popup__field-input">
+          <input id="popup__name-input" class="popup__input" value="Жак-Ив Кусто" placeholder="Имя">
+        </label>
+        <label class="popup__field-input">
+          <input id="popup__job-input" class="popup__input" value="Исследователь океана" placeholder="О себе">
+        </label>
+        <button id="popup__save-button" class="popup__save">Сохранить</button>
+      </fieldset>
+      <button id="popup__close" type="button" class="popup__button-close"></button>
+    </form>     
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

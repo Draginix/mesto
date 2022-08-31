@@ -1,0 +1,8 @@
+.elements__gallery-item {
+    width: 282px;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
