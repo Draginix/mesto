@@ -5,6 +5,7 @@
     height: 32px;
     border: none;
     background-color: transparent;
+    background-repeat: no-repeat;
     top: -40px;
     right: -40px;
     cursor: pointer;
