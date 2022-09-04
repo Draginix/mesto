@@ -13,7 +13,7 @@
   </header>
   <main class="content">
     <section class="profile">
-      <img class="profile__avatar" src="./images/image.png" alt="Ваш аватар">
+      <img class="profile__avatar" src="./images/avatar.jpg" alt="Ваш аватар">
       <div class="profile__info">
         <h1 id="profile__name" class="profile__name">Жак-Ив Кусто</h1>
         <p id="profile__job" class="profile__job">Исследователь океана</p>
@@ -24,42 +24,42 @@
     <section class="elements">
       <ul id="elements__gallery" class="elements__gallery">
         <li class="elements__gallery-item">
-          <img class="elements__image" src="./images/Karachaevsk.png" alt="Заброшенное здание в горах Карачаевска">
+          <img class="elements__image" src="./images/karachaev.jpg" alt="Заброшенное здание в горах Карачаевска">
           <div class="elements__container">
             <h2 class="elements__title">Карачаевск</h2>
             <button type="button" class="elements__like"></button>
           </div>
         </li>
         <li class="elements__gallery-item">
-          <img class="elements__item" src="./images/elbrus-hill.png" alt="Гора Эльбруса на горизонте">
+          <img class="elements__item" src="./images/elbrusHill.jpg" alt="Гора Эльбруса на горизонте">
           <div class="elements__container">
             <h2 class="elements__title">Гора Эльбрус</h2>
             <button type="button" class="elements__like"></button>
           </div>
         </li>
         <li class="elements__gallery-item">
-          <img class="elements__item" src="./images/dombay.png" alt="вид на заснеженные горы Домбая">
+          <img class="elements__item" src="./images/dombay.jpg" alt="вид на заснеженные горы Домбая">
           <div class="elements__container">
             <h2 class="elements__title">Домбай</h2>
             <button type="button" class="elements__like"></button>
           </div>
         </li>
         <li class="elements__gallery-item">
-          <img class="elements__item" src="./images/elbrus-hill.png" alt="Гора Эльбруса на горизонте">
+          <img class="elements__item" src="./images/elbrusHill.jpg" alt="Гора Эльбруса на горизонте">
           <div class="elements__container">
             <h2 class="elements__title">Гора Эльбрус</h2>
             <button type="button" class="elements__like"></button>
           </div>
         </li>
         <li class="elements__gallery-item">
-          <img class="elements__item" src="./images/dombay.png" alt="вид на заснеженные горы Домбая">
+          <img class="elements__item" src="./images/dombay.jpg" alt="вид на заснеженные горы Домбая">
           <div class="elements__container">
             <h2 class="elements__title">Домбай</h2>
             <button type="button" class="elements__like"></button>
           </div>
         </li>
         <li class="elements__gallery-item">
-          <img class="elements__item" src="./images/Karachaevsk.png" alt="Заброшенное здание в горах Карачаевска">
+          <img class="elements__item" src="./images/karachaev.jpg" alt="Заброшенное здание в горах Карачаевска">
           <div class="elements__container">
             <h2 class="elements__title">Карачаево-Черкесия</h2>
             <button type="button" class="elements__like"></button>
@@ -72,20 +72,18 @@
     <p class="footer__copyright">© 2022 Mesto Russia & Дмитрий Бакшистов</p>
   </footer>
   <div id="popup" class="popup">
-    <form id="popup__form" class="popup__form">
-      <fieldset class="popup__field">
-        <legend class="popup__title">Редактировать профиль</legend>
-        <label class="popup__field-input">
-          <input id="popup__name-input" class="popup__input" value="Жак-Ив Кусто" placeholder="Имя" maxlength="23">
-        </label>
-        <label class="popup__field-input">
-          <input id="popup__job-input" class="popup__input" value="Исследователь океана" placeholder="О себе" maxlength="50">
-        </label>
-        <button id="popup__save-button" class="popup__save">Сохранить</button>
-      </fieldset>
+    <div class="popup__container">
       <button id="popup__close" type="button" class="popup__button-close"></button>
-    </form>     
+      <h3 class="popup__title">Редактировать профиль</h3>
+      <form id="popup__form" action="#" class="popup__form" name="edit-form">
+        <fieldset class="popup__field">
+          <input id="popup__name-input" class="popup__input" placeholder="Имя">
+          <input id="popup__job-input" class="popup__input" placeholder="О себе">
+          <button type="submit" id="popup__save-button" class="popup__save">Сохранить</button>
+        </fieldset>
+      </form>  
+    </div>   
   </div>
-  <script src="index.js"></script>
+  <script src="./scripts/index.js"></script>
 </body>
 </html>
