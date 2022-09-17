@@ -27,12 +27,12 @@ const popUpCloseAdd = document.querySelector('#popup__close-add');
 const popUpCloseImage = document.querySelector('#popup__close-image');
 
 // Функции открытия/закрытия PopUp
-function openPopup(block) {
-  block.classList.add('popup_open');
+function openPopup(modal) {
+  modal.classList.add('popup_open');
 }
 
-function closePopup(block) {
-  block.classList.remove('popup_open');
+function closePopup(modal) {
+  modal.classList.remove('popup_open');
 }
 
 popUpCloseProfile.addEventListener('click', () => closePopup(popUpProfile));
