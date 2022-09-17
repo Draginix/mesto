@@ -13,3 +13,9 @@
 .elements__like:hover {
     opacity: 0.5;
 } 
+
+@media screen and (max-width: 768px) {
+    .elements__like:hover {
+        opacity: 1;
+    }
+}
