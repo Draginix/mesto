@@ -9,11 +9,16 @@
     width: 358px;
     border: none;
     cursor: pointer;
-    margin: 48px 0 0;
+    margin: 35px 0 0;
 }
   
 .popup__save:hover {
     opacity: 0.8;
+}
+
+.popup__save:focus {
+    outline: none;
+    box-shadow: 1px 1px 10px #000;
 }
 
 @media screen and (max-width: 768px) {

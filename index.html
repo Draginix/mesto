@@ -34,11 +34,13 @@
     <div class="popup__container">
       <button id="popup__close-profile" type="button" class="popup__button-close"></button>
       <h3 class="popup__title">Редактировать профиль</h3>
-      <form id="popup__form_edit" action="#" class="popup__form" name="edit-form">
+      <form id="profile_edit" action="#" class="popup__form" name="edit-form">
         <fieldset class="popup__field">
-          <input id="popup__name-input" class="popup__input" placeholder="Имя">
-          <input id="popup__job-input" class="popup__input" placeholder="О себе">
-          <button type="submit" class="popup__save">Сохранить</button>
+          <input type="text" id="name" name="input_name"  class="popup__input popup__input_content_name" placeholder="Имя" value="Жак-Ив Кусто"  minlength="2" maxlength="40" required>
+          <span class="popup__input-error popup__input-error_content_name"></span>
+          <input type="text" id="job" name="input_job" class="popup__input popup__input_content_job" placeholder="О себе" value="Исследователь океана" minlength="2" maxlength="200" required>
+          <span class="popup__input-error popup__input-error_content_job"></span>
+          <button type="submit" class="popup__save popup__save_disabled" name="save_profile">Сохранить</button>
         </fieldset>
       </form>  
     </div>   
@@ -47,11 +49,13 @@
     <div class="popup__container">
       <button id="popup__close-add" type="button" class="popup__button-close"></button>
       <h3 class="popup__title">Новое место</h3>
-      <form id="popup__form_add" action="#" class="popup__form" name="edit-form">
+      <form id="new_place" action="#" class="popup__form" name="edit-form">
         <fieldset class="popup__field">
-          <input id="popup__location-input" class="popup__input" placeholder="Название">
-          <input id="popup__url-input" class="popup__input" placeholder="Ссылка на картинку">
-          <button type="submit" class="popup__save">Создать</button>
+          <input type="text" id="location-name" name="input_location-name" class="popup__input popup__input_content_location-name" placeholder="Название" minlength="2" maxlength="30" value="" required>
+          <span class="popup__input-error popup__input-error_content_location-name"></span>
+          <input type="url" id="url" name="input_image-url" class="popup__input popup__input_content_url" placeholder="Ссылка на картинку" value="" required>
+          <span class="popup__input-error popup__input-error_content_url"></span>
+          <button type="submit" class="popup__save popup__save_disabled" name="add_new">Создать</button>
         </fieldset>
       </form>  
     </div>   
@@ -79,5 +83,6 @@
   </template>
   <script src="./scripts/data.js"></script>
   <script src="./scripts/index.js"></script>
+  <script src="./scripts/validate.js"></script>
 </body>
 </html>
