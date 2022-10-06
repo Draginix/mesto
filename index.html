@@ -36,10 +36,10 @@
       <h3 class="popup__title">Редактировать профиль</h3>
       <form id="profile_edit" action="#" class="popup__form" name="edit-form">
         <fieldset class="popup__field">
-          <input type="text" id="name" name="input_name"  class="popup__input popup__input_content_name" placeholder="Имя" value="Жак-Ив Кусто"  minlength="2" maxlength="40" required>
-          <span class="popup__input-error popup__input-error_content_name"></span>
-          <input type="text" id="job" name="input_job" class="popup__input popup__input_content_job" placeholder="О себе" value="Исследователь океана" minlength="2" maxlength="200" required>
-          <span class="popup__input-error popup__input-error_content_job"></span>
+          <input type="text" id="input__name" name="name" class="popup__input popup__input_content_name" placeholder="Имя" value="Жак-Ив Кусто"  minlength="2" maxlength="40" required>
+          <span class="popup__input-error input__name-error"></span>
+          <input type="text" id="input__job" name="job" class="popup__input popup__input_content_job" placeholder="О себе" value="Исследователь океана" minlength="2" maxlength="200" required>
+          <span class="popup__input-error input__job-error"></span>
           <button type="submit" class="popup__save popup__save_disabled" name="save_profile">Сохранить</button>
         </fieldset>
       </form>  
@@ -51,10 +51,10 @@
       <h3 class="popup__title">Новое место</h3>
       <form id="new_place" action="#" class="popup__form" name="edit-form">
         <fieldset class="popup__field">
-          <input type="text" id="location-name" name="input_location-name" class="popup__input popup__input_content_location-name" placeholder="Название" minlength="2" maxlength="30" value="" required>
-          <span class="popup__input-error popup__input-error_content_location-name"></span>
-          <input type="url" id="url" name="input_image-url" class="popup__input popup__input_content_url" placeholder="Ссылка на картинку" value="" required>
-          <span class="popup__input-error popup__input-error_content_url"></span>
+          <input type="text" id="input__location-name" name="location-name" class="popup__input popup__input_content_location-name" placeholder="Название" minlength="2" maxlength="30" value="" required>
+          <span class="popup__input-error input__location-name-error"></span>
+          <input type="url" id="input__image-url" name="image-url" class="popup__input popup__input_content_url" placeholder="Ссылка на картинку" value="" required>
+          <span class="popup__input-error input__image-url-error"></span>
           <button type="submit" class="popup__save popup__save_disabled" name="add_new">Создать</button>
         </fieldset>
       </form>  

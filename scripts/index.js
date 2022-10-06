@@ -5,6 +5,7 @@ const popUpAdd = document.querySelector('#popup__add');
 const popupImageSee = document.querySelector('#popup__image');
 // FORM PROFILE
 const formElementProfile = document.querySelector('#profile_edit');
+const buttonSubmitEdit = formElementProfile.querySelector('.popup__save');
 const nameInput = document.querySelector('.popup__input_content_name');
 const jobInput = document.querySelector('.popup__input_content_job');
 const profileName = document.querySelector('#profile__name');
@@ -14,7 +15,8 @@ const editButton = document.querySelector('#profile__edit-button');
 // Open AddForm
 const addButton = document.querySelector('#profile__add-button');
 // FORM ADD
-const formElementAdd = document.querySelector('#new_place')
+const formElementAdd = document.querySelector('#new_place');
+const buttonSubmitPlace = formElementAdd.querySelector('.popup__save');
 const locationInput = document.querySelector('.popup__input_content_location-name');
 const urlImageInput = document.querySelector('.popup__input_content_url')
 const cardImage = document.querySelector('.elements__image');
@@ -61,10 +63,10 @@ function openPopUpProfile() {
   openPopup(popUpProfile);
   nameInput.value = profileName.textContent;
   jobInput.value = profileJob.textContent;
-  enableSubmitButton(buttonSubmitPlace);
+  enableSubmitButton(buttonSubmitEdit);
 }
 
-function submitFormProfile (event) {
+function handleProfileFormSubmit (event) {
     event.preventDefault();
     profileName.textContent = nameInput.value;
     profileJob.textContent = jobInput.value;
@@ -72,16 +74,16 @@ function submitFormProfile (event) {
 }
 
 editButton.addEventListener('click', openPopUpProfile);
-formElementProfile.addEventListener('submit', submitFormProfile);
+formElementProfile.addEventListener('submit', handleProfileFormSubmit);
 
-// Функции AddCards
+// Функции createCard
 function openAddPopup() {
   openPopup(popUpAdd);
   formElementAdd.reset();
   disableSubmitButton(buttonSubmitPlace);
 }
 
-function submitAddForm(evt) {
+function handleCardFormSubmit(evt) {
   evt.preventDefault();
   renderCard(locationInput.value, urlImageInput.value);
   locationInput.value = '';
@@ -90,7 +92,7 @@ function submitAddForm(evt) {
 }
 
 addButton.addEventListener('click', openAddPopup);
-formElementAdd.addEventListener('submit', submitAddForm);
+formElementAdd.addEventListener('submit', handleCardFormSubmit);
 
 // Функция открытия Image
 function openImage(image, caption) {
@@ -118,9 +120,11 @@ function disableErrorMessages() {
 // Функции Cards
 const cardsTemplate = document.querySelector('#template').content;
 const cardsList = document.querySelector('.elements__gallery');
+const cardsItem = cardsTemplate.querySelector('.elements__gallery-item');
 
-function addCard(name, link) {
-  const cardElement = cardsTemplate.querySelector('.elements__gallery-item').cloneNode(true);
+
+function createCard(name, link) {
+  const cardElement = cardsItem.cloneNode(true);
   const cardElementImage = cardElement.querySelector('.elements__image');
 
   const removeCardButton = cardElement.querySelector('.elements__button-remove');
@@ -138,7 +142,7 @@ function addCard(name, link) {
 }
 
 function renderCard (name, link) {
-  const cardElement = addCard(name, link);
+  const cardElement = createCard(name, link);
   cardsList.prepend(cardElement);
 }
 
