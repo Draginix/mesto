@@ -34,13 +34,12 @@ const errorMessages = document.querySelectorAll('.popup__input-error');
 // Функции открытия
 function openPopup(modal) {
   modal.classList.add('popup_open');
-  document.addEventListener('keydown', closeByEscape)
+  document.addEventListener('keydown', closeByEscape);
 }
 
 // Функции закрытия
 function closePopup(modal) {
   modal.classList.remove('popup_open');
-  disableErrorMessages();
   document.removeEventListener('keydown', closeByEscape);
 }
 
@@ -64,6 +63,7 @@ function openPopUpProfile() {
   nameInput.value = profileName.textContent;
   jobInput.value = profileJob.textContent;
   enableSubmitButton(buttonSubmitEdit);
+  disableErrorMessages();
 }
 
 function handleProfileFormSubmit (event) {
@@ -81,6 +81,7 @@ function openAddPopup() {
   openPopup(popUpAdd);
   formElementAdd.reset();
   disableSubmitButton(buttonSubmitPlace);
+  disableErrorMessages();
 }
 
 function handleCardFormSubmit(evt) {
