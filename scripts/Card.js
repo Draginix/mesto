@@ -8,17 +8,12 @@ export class Card {
 
   _getTemplate() {
     const cardElement = document
-      .querySelector(this._templateSelector)
-      .content
-      .querySelector('.elements__gallery-item')
-      .cloneNode(true);
+    .querySelector(this._templateSelector)
+    .content
+    .querySelector('.elements__gallery-item')
+    .cloneNode(true);
 
-      return cardElement;
-  }
-
-  renderCard() {
-    const cardElement = this._createCard();
-    document.querySelector('.elements__gallery').prepend(cardElement);
+    return cardElement;
   }
 
   _setEventListeners() {

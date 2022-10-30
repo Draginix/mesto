@@ -1,5 +1,5 @@
 import { Card } from './Card.js';
-import { FormValidator } from './validate.js';
+import { FormValidator } from './FormValidator.js';
 
 const popups = document.querySelectorAll('.popup');
 // TOP POPUP
@@ -38,7 +38,7 @@ function closePopup(modal) {
 
 function closeByEscape(evt) {
   if (evt.key === 'Escape') {
-    popups.forEach(modal => closePopup(modal));
+    popups.forEach(closePopup);
   }
 }
 
